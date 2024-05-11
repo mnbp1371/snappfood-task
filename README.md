@@ -24,7 +24,7 @@
 
 ## Deploy project
 
-1. git clone git@github.com:idpay/sandbox.git
+1. git clone git@github.com:mnbp1371/snappfood-task.git
 2. cd snappfood-task
 3. composer install
 4. cp .env.example .env
@@ -35,3 +35,21 @@
 9. echo '127.0.0.1 snappfood-task.local' | sudo tee -a /etc/hosts
 10. sudo php artisan serve --host=snappfood-task.local --port=80
 11. Open project on http://snappfood-task.local
+
+## Deploy project via docker
+
+1. git clone git@github.com:mnbp1371/snappfood-task.git
+2. cd snappfood-task
+3. docker compose up
+4. docker exec -it snappfood.app /bin/bash
+5. composer install
+6. cp .env.example .env
+7. php artisan migrate:fresh
+8. php artisan db:seed
+9. php artisan key:generate
+11. Open project on http://127.0.0.1:8000
+
+
+
+
+
